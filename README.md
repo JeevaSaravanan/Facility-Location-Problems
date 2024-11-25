@@ -21,7 +21,7 @@ The objective of CFLP is to find the optimal number and location of warehouses t
 
 Objective function:
 
-$$  \sum^{M}_{j=1} {f_j \cdot y_j} + \sum^{N}_{i=1}\sum^{M}_{j=1}t_{ij} \cdot x_{ij} $$
+$\sum^{M}_{j=1} {f_j \cdot y_j} + \sum^{N}_{i=1}\sum^{M}_{j=1}t_{ij} \cdot x_{ij}$
 
 Where,
 
@@ -34,16 +34,21 @@ Where,
 
 
 Constraints:
-	1.	Warehouse capacities must not be exceeded:
-$$ \sum^{N}_{i=1} x_{ij} \leq C_{j} \cdot y_j $$
-	2.	Customer demands must be met:
-$$ 0 \leq x_{ij} \leq d_i \cdot y_j $$
+1.	Warehouse capacities must not be exceeded:
+
+$\sum^{N}_{i=1} x_{ij} \leq C_{j} \cdot y_j$
+
+2.	Customer demands must be met:
+
+$0 \leq x_{ij} \leq d_i \cdot y_j$
+
 3.	Deliveries are non-negative and respect demand limits:
 
-$$ \sum^{M}_{j=1} x_{ij} = d_i$$
+$\sum^{M}_{j=1} x_{ij} = d_i$
 
 4.	Warehouses are either built or not:
-$$ y_j \in \{0, 1\} $$
+
+$ y_j \in \{0, 1\} $
 
 
 Data used: https://simplemaps.com/data/us-cities
